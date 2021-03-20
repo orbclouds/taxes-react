@@ -1,0 +1,14 @@
+.Container {
+  position: relative;
+}
+
+.Bar {
+  width: 100%;
+  height: 100%;
+  background: #342ead;
+}
+
+.Value {
+  font-size: 0.8em;
+  text-align: center;
+}

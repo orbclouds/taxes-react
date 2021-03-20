@@ -1,0 +1,19 @@
+.Container {
+  width: 95%;
+  margin: 8px;
+  padding: 8px;
+  height: 400px;
+  display: flex;
+  flex-basis: 50%;
+  border-radius: 4px;
+  background: white;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 667px) {
+  .Container {
+    height: 304px;
+    border-radius: 12px;
+  }
+}
