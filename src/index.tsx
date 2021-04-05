@@ -14,8 +14,6 @@ render(
   target
 );
 
-if (import.meta.env.NODE_ENV === 'production') {
-  ReactGA.initialize(import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS_ID);
-  ReactGA.pageview(window.location.pathname + window.location.search);
-}
+ReactGA.initialize(import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS_ID);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
