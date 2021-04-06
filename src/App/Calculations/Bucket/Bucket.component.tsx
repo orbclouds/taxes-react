@@ -1,15 +1,15 @@
-import React from "react";
-import type { FC } from "react";
+import React from 'react';
+import type { FC } from 'react';
 
-import { formatDollar } from "@app/utils";
+import { formatDollar } from '@app/utils';
 
-import Label from "./Label";
-import Panel from "./Panel";
-import Content from "./Content";
-import BarGraph from "./BarGraph";
+import Label from './Label';
+import Panel from './Panel';
+import Content from './Content';
+import BarGraph from './BarGraph';
 
-import styles from "./Bucket.module.css";
-import { formatRate } from "./Bucket.utils";
+import styles from './Bucket.module.css';
+import { formatRate } from './Bucket.utils';
 
 interface Props {
   income: number;
@@ -18,18 +18,33 @@ interface Props {
   tax: number;
 }
 
-const Bucket: FC<Props> = ({ income, rate, tax, cap }) => {
+const Bucket: FC<Props> = ({
+  income,
+  rate,
+  tax,
+  cap,
+}) => {
   return (
-    <section className={styles.Container}>
+    <section
+      className={styles.Container}
+    >
       <Panel>
         <div className={styles.Inner}>
           <div>
             <Label>Tax rate: </Label>
-            <Content>{formatRate(rate)}</Content>
+            <Content>
+              {formatRate(rate)}
+            </Content>
           </div>
           <div>
-            <Label>Income bracket: </Label>
-            <Content>{cap === Infinity ? "NA" : formatDollar(cap)}</Content>
+            <Label>
+              Income bracket:{' '}
+            </Label>
+            <Content>
+              {cap === Infinity
+                ? 'NA'
+                : formatDollar(cap)}
+            </Content>
           </div>
         </div>
       </Panel>
@@ -38,11 +53,15 @@ const Bucket: FC<Props> = ({ income, rate, tax, cap }) => {
           values={[
             {
               value: tax,
-              label: "Taxes paid",
+              label: 'Taxes paid',
             },
             {
-              value: Math.min(tax / rate, cap),
-              label: "Income within bracket",
+              value: Math.min(
+                tax / rate,
+                cap
+              ),
+              label:
+                'Income within bracket',
             },
           ]}
         />

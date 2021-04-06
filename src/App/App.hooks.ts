@@ -1,4 +1,8 @@
-import { useState, useCallback, ChangeEventHandler } from "react";
+import {
+  useState,
+  useCallback,
+  ChangeEventHandler,
+} from 'react';
 
 type IncomeHandler = ChangeEventHandler<HTMLInputElement>;
 
@@ -8,14 +12,24 @@ interface Hooks {
 }
 
 const useHooks = (): Hooks => {
-  const [income, setIncome] = useState("");
+  const [income, setIncome] = useState(
+    ''
+  );
 
-  const updateIncome: IncomeHandler = useCallback(({ currentTarget }) => {
-    const { value } = currentTarget as HTMLInputElement;
-    setIncome(value);
-  }, []);
+  const updateIncome: IncomeHandler = useCallback(
+    ({ currentTarget }) => {
+      const {
+        value,
+      } = currentTarget as HTMLInputElement;
+      setIncome(value);
+    },
+    []
+  );
 
-  return { value: income, onChange: updateIncome };
+  return {
+    value: income,
+    onChange: updateIncome,
+  };
 };
 
 export default useHooks;

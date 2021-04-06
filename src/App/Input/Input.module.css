@@ -13,18 +13,22 @@
   border: solid 1px #ccc;
   -moz-appearance: textfield;
   box-shadow: 0 0 0px rgba(0, 0, 0, 0);
-  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
-    box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: opacity 0.3s
+      cubic-bezier(0.25, 0.1, 0.25, 1),
+    box-shadow 0.3s
+      cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .Input:hover {
   opacity: 0.92;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 16px
+    rgba(0, 0, 0, 0.05);
 }
 
 .Input:focus {
   opacity: 1;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 24px
+    rgba(0, 0, 0, 0.1);
 }
 
 .Input::-webkit-outer-spin-button,

@@ -1,7 +1,10 @@
-import React from "react";
-import type { FC, ChangeEventHandler } from "react";
+import React from 'react';
+import type {
+  FC,
+  ChangeEventHandler,
+} from 'react';
 
-import styles from "./Input.module.css";
+import styles from './Input.module.css';
 
 interface Props {
   value: string;

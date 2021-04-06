@@ -1,1 +1,1 @@
-export { default as default } from "./Panel.component";
+export { default as default } from './Panel.component';

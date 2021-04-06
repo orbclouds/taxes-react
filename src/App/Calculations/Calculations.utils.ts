@@ -14,12 +14,20 @@ export const calculateTaxes = (
   let taxes: CalculatedTax[] = [] as CalculatedTax[];
   let remainingIncome = income;
 
-  for (let i = 0; i < defaultTaxes.length; i++) {
+  for (
+    let i = 0;
+    i < defaultTaxes.length;
+    i++
+  ) {
     if (remainingIncome === 0) break;
 
-    const { rate, cap } = defaultTaxes[i];
+    const { rate, cap } = defaultTaxes[
+      i
+    ];
     const incomeForBracket = Math.min(
-      Number.isNaN(cap) ? remainingIncome : cap,
+      Number.isNaN(cap)
+        ? remainingIncome
+        : cap,
       remainingIncome
     );
     const tax = incomeForBracket * rate;

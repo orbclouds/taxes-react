@@ -1,3 +1,5 @@
-export const formatRate = (rate: number): string => {
+export const formatRate = (
+  rate: number
+): string => {
   return `${rate * 100}%`;
 };
