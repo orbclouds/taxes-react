@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo } from "react";
 
 export interface Value {
   value: number;
@@ -18,8 +18,8 @@ const useHooks = (values: Value[]): Hooks => {
     }
 
     return maxValue as number;
-  }, [values])
+  }, [values]);
   return { max };
-}
+};
 
 export default useHooks;

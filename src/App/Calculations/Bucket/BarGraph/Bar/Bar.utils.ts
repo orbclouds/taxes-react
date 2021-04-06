@@ -9,13 +9,9 @@ interface Args {
   index: number;
 }
 
-export const getBarStyle = ({
-  factor,
-  width,
-  index,
-}: Args): BarStyle => {
+export const getBarStyle = ({ factor, width, index }: Args): BarStyle => {
   return {
     height: `${index * 100}%`,
     width: `${factor * width}%`,
   };
-}
+};

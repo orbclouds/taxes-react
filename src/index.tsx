@@ -16,4 +16,3 @@ render(
 
 ReactGA.initialize(import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS_ID);
 ReactGA.pageview(window.location.pathname + window.location.search);
-

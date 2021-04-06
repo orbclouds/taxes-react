@@ -26,5 +26,5 @@ export const TAXES = [
   {
     rate: 0.37,
     cap: Infinity,
-  }
-]
+  },
+];

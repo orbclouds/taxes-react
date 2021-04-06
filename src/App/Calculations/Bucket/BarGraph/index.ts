@@ -1,1 +1,1 @@
-export { default as default } from './BarGraph.component';
+export { default as default } from "./BarGraph.component";
